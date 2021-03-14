@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/whoami/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/whoami/static/js/main.24b9ef79.chunk.js",
-    "main.js.map": "/whoami/static/js/main.24b9ef79.chunk.js.map",
+    "main.js": "/whoami/static/js/main.73e54498.chunk.js",
+    "main.js.map": "/whoami/static/js/main.73e54498.chunk.js.map",
     "runtime-main.js": "/whoami/static/js/runtime-main.575e6a7e.js",
     "runtime-main.js.map": "/whoami/static/js/runtime-main.575e6a7e.js.map",
     "static/js/2.071289f3.chunk.js": "/whoami/static/js/2.071289f3.chunk.js",
@@ -11,14 +11,12 @@
     "static/js/3.7886711e.chunk.js.map": "/whoami/static/js/3.7886711e.chunk.js.map",
     "index.html": "/whoami/index.html",
     "static/css/main.9d5b29c0.chunk.css.map": "/whoami/static/css/main.9d5b29c0.chunk.css.map",
-    "static/js/2.071289f3.chunk.js.LICENSE.txt": "/whoami/static/js/2.071289f3.chunk.js.LICENSE.txt",
-    "static/media/headshot.e9b95dfd.jpg": "/whoami/static/media/headshot.e9b95dfd.jpg",
-    "static/media/skyline.b3cd4f30.jpg": "/whoami/static/media/skyline.b3cd4f30.jpg"
+    "static/js/2.071289f3.chunk.js.LICENSE.txt": "/whoami/static/js/2.071289f3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.575e6a7e.js",
     "static/js/2.071289f3.chunk.js",
     "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.24b9ef79.chunk.js"
+    "static/js/main.73e54498.chunk.js"
   ]
 }
