@@ -1,6 +1,4 @@
 import React, { useState, useLayoutEffect } from "react";
-import headshot from "./res/headshot.jpg";
-import skyline from "./res/skyline.jpg";
 import "./App.css";
 import {
   Grid,
@@ -64,12 +62,12 @@ const THeader = (props: { headWidth: number }) => {
 const Intro = (props: { headerOffset: number }) => {
   return (
     <Box
-      sx={{minHeight: "100px",position: 'relative', zIndex: 0 }}
+      sx={{ minHeight: "100px", position: 'relative', zIndex: 0 }}
       padding={"10%"}
       mt={props.headerOffset + "px"}
       mb={0}
     >
-      <Heading fontStyle="italic" color="white" fontSize="xxx-large" sx={{position:'relative', zIndex: 3}}>
+      <Heading fontStyle="italic" color="white" fontSize="xxx-large" sx={{ position: 'relative', zIndex: 3 }}>
         Hi, my name is Theo
       </Heading>
     </Box>
@@ -82,8 +80,8 @@ const Bio = () => {
       color="white"
       p="5%"
       bg="#182525"
-      
-      sx={{ float: "left", textAlign: "left", position:'relative', zIndex: 2, borderRadius: '2vw' }}
+
+      sx={{ float: "left", textAlign: "left", position: 'relative', zIndex: 2, borderRadius: '2vw' }}
     >
       <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
         <Box>
@@ -93,8 +91,8 @@ const Bio = () => {
           <img
             style={{ borderRadius: "20px" }}
             width="80%"
-            src={headshot}
-            alt="me"
+            src= {process.env.PUBLIC_URL+'/res/headshot.jpg'}
+            alt='me'
           />
         </Box>
         <Box mr="5%">
@@ -119,39 +117,39 @@ interface ProjectProps {
   description: string;
   href: string;
 }
-const ProjectWidget = (props:ProjectProps) => {
-  const makeImage = ()=> {
-      if (props.image) {
-          return (
-              <div className="project-image">
-                  <img src={props.image}></img>
-                  {!props.isLogo ? <div className="overlay"></div> : null}
-              </div>
-          );
-      } else {
-          return null;
-      }
+const ProjectWidget = (props: ProjectProps) => {
+  const makeImage = () => {
+    if (props.image) {
+      return (
+        <div className="project-image">
+          <img src={props.image}></img>
+          {!props.isLogo ? <div className="overlay"></div> : null}
+        </div>
+      );
+    } else {
+      return null;
+    }
   }
   return (
-          <div className="project" onClick={()=>{
-              window.location.href = props.href;
-          }}>
-              <h1>{props.name}</h1>
-              {makeImage()}
-              <span className="description">{props.description}</span>
-          </div>
-    );
+    <div className="project" onClick={() => {
+      window.location.href = props.href;
+    }}>
+      <h1>{props.name}</h1>
+      {makeImage()}
+      <span className="description">{props.description}</span>
+    </div>
+  );
 }
 
-const Footer = ()=>{
- return(<Box bg="#101818" width="100%" height="auto" color = 'grey'>
- <Heading p='3%' pb='0' textAlign='left' fontSize = 'medium'>Copyright © Thelonious Cooper 2021</Heading> 
- <Heading p='3%' pt='1%' pb='2%' textAlign='left' fontSize = 'medium'>I made this website from scratch! Check it out <a style={{color:'grey'}} href = 'https://github.com/theloni-monk/whoami'>here</a></Heading>
- 
- <Box width='40%' pb='2%'>
-  <hr/> 
- </Box>
-</Box>);
+const Footer = () => {
+  return (<Box bg="#101818" width="100%" height="auto" color='grey'>
+    <Heading p='3%' pb='0' textAlign='left' fontSize='medium'>Copyright © Thelonious Cooper 2021</Heading>
+    <Heading p='3%' pt='1%' pb='2%' textAlign='left' fontSize='medium'>I made this website from scratch! Check it out <a style={{ color: 'grey' }} href='https://github.com/theloni-monk/whoami'>here</a></Heading>
+
+    <Box width='40%' pl='3%' pb='2%'>
+      <hr />
+    </Box>
+  </Box>);
 }
 
 
@@ -168,12 +166,10 @@ const App = () => {
   }, [headerWidth, headerHeight]);
   return (
     <div className="App height=100% margin-bottom=50px">
-      
+
       <section id="header">
         <THeader headWidth={headerWidth} />
-        
-          <Box sx={{backgroundImage: 'url('+skyline+')', minHeight: 300, width: '100%', height:'100%', position:'fixed', zIndex:-1}}/>
-        
+        <Box sx={{ backgroundImage: 'url(' + process.env.PUBLIC_URL+'/res/skyline.jpg)', minHeight: 300, width: '100%', height: '100%', position: 'fixed', zIndex:'0!important'}} />
       </section>
       <section id="intro">
         <Intro headerOffset={headerHeight} />
@@ -181,19 +177,19 @@ const App = () => {
       <section id="bio">
         <Bio />
       </section>
-      <section id="actions">
+      <section id="projects">
         <Box mt="5%" p="5%">
-          <Heading textAlign="left" color="#101818">
-            Check out my projects:
+          <Heading textAlign="left" color="white">
+            TODO: write project section
             </Heading>
         </Box>
         <Grid gridTemplateColumns="repeat(3, auto)" gridGap={3}>
 
         </Grid>
       </section>
-      <section id = 'technologies'></section>
+      <section id='technologies'></section>
       <section id="footer">
-        <Footer/>
+        <Footer />
       </section>
     </div>
   );
