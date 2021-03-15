@@ -1,12 +1,14 @@
 import Bio from './Bio'
 import Footer from './Footer'
 import Intro from './Intro'
-import THeader from './THeader'
+import FixedHeader from './FixedHeader'
 import ProjectWidget from './ProjectWidget'
+import LinkWidget from './LinkWidget'
 export {
     Bio,
     Footer,
     Intro,
-    THeader,
-    ProjectWidget
+    FixedHeader,
+    ProjectWidget,
+    LinkWidget
 }

@@ -1,7 +1,7 @@
 import {Header, Heading, Fixed, UnderlineNav, StyledOcticon} from '@primer/components'
 import { MarkGithubIcon } from "@primer/octicons-react";
 
-const THeader = (props: { headWidth: number }) => {
+const FixedHeader = (props: { headWidth: number }) => {
     return (<Fixed top={0} width="100%" p={0} zIndex={10} id="head">
       <Header backgroundColor="#101818" p={3}>
         <Header.Item>
@@ -23,21 +23,21 @@ const THeader = (props: { headWidth: number }) => {
           {/**todo make responsive with hamburger menue for mobile */}
           <UnderlineNav aria-label="Main">
             <UnderlineNav.Link
-              href="#home"
+              href="/home"
               color="white"
               sx={{ ":hover": { color: "grey" } }}
             >
               Home
           </UnderlineNav.Link>
             <UnderlineNav.Link
-              href="#documentation"
+              href="/links"
               color="white"
               sx={{ ":hover": { color: "grey" } }}
             >
               Links
           </UnderlineNav.Link>
             <UnderlineNav.Link
-              href="#support"
+              href="/contact-me"
               color="white"
               sx={{ ":hover": { color: "grey" } }}
             >
@@ -48,4 +48,4 @@ const THeader = (props: { headWidth: number }) => {
       </Header>
     </Fixed>);
   }
-export default THeader;
+export default FixedHeader;

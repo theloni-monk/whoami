@@ -1,9 +1,9 @@
 import Home from './Home'
-import Contacts from './Contacts'
+import ContactMe from './ContactMe'
 import Links from './Links'
 
 export {
     Home,
-    Contacts,
+    ContactMe,
     Links
 }

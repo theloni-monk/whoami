@@ -11,8 +11,8 @@ const App = () => {
     <Switch>
       <Redirect exact from="/" to="/home"/>
       <Route exact path = '/home' component = {Pages.Home}/>
-      <Route path='/links' component = {Pages.Links}/>
-      <Route path='/contact-me' component = {Pages.Contacts}/>
+      <Route exact path='/links' component={Pages.Links}/>
+      <Route exact path='/contact-me' component = {Pages.ContactMe}/>
     </Switch>
   );
 }

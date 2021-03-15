@@ -6,10 +6,9 @@ import {
   Heading
 } from "@primer/components";
 
-import {Bio, Footer, THeader, Intro, ProjectWidget} from '../components'
+import {Bio, Footer, FixedHeader, Intro, ProjectWidget} from '../components'
 
 
-//WRITEME: routing for link and contact page
 const Home = () => {
   const [headerWidth, setHeaderwidth] = useState(50);
   const [headerHeight, setHeaderHeight] = useState(50);
@@ -17,7 +16,6 @@ const Home = () => {
   //make sure the fixed header doesn't overlap the intro
   useLayoutEffect(() => {
     setHeaderwidth(window.innerWidth);
-    console.log(headerWidth);
     setHeaderHeight(document.getElementById("head")?.clientHeight as number);
   }, [headerWidth, headerHeight]);
 
@@ -25,7 +23,7 @@ const Home = () => {
     <div className="App height=100% margin-bottom=50px">
 
       <section id="header">
-        <THeader headWidth={headerWidth} />
+        <FixedHeader headWidth={headerWidth} />
         <Box sx={{ backgroundImage: 'url(' + process.env.PUBLIC_URL+'/res/skyline.jpg)', minHeight: 300, width: '100%', height: '100%', position: 'fixed', zIndex:'0!important'}} />
       </section>
       <section id="intro">
@@ -41,7 +39,7 @@ const Home = () => {
             </Heading>
         </Box>
         <Grid gridTemplateColumns="repeat(3, auto)" gridGap={3}>
-          WRITEME: project widgets
+          WRITEME: project widget section
         </Grid>
       </section>
       <section id='technologies'>WRITEME: technologies section</section>
