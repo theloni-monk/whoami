@@ -51,14 +51,14 @@ const FixedHeader = (props: { headWidth: number }) => {
               Home
           </UnderlineNav.Link>
             <UnderlineNav.Link
-              href={"/#/links"}
+              href={process.env.PUBLIC_URL+"/#/links"}
               color="white"
               sx={{ ":hover": { color: "grey" } }}
             >
               Links
           </UnderlineNav.Link>
             <UnderlineNav.Link
-              href="/#/contact-me"
+              href={process.env.PUBLIC_URL+"/#/contact-me"}
               color="white"
               sx={{ ":hover": { color: "grey" } }}
             >
