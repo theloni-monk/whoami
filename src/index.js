@@ -13,6 +13,7 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+console.log(process.env.PUBLIC_URL)
 console.log('Why are you reading this? Fuckin Nerd')
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
