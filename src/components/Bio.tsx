@@ -22,8 +22,8 @@ const Bio = () => {
           </Box>
           <Box mr="5%">
             <p style={{ textIndent: "1em", fontSize: "3.25vw" }}>
-              I am Theo, a Las Vegas transplant from Boston who is looking forward
-              to returning to the Greater Boston Area and attending MIT. I am
+              I am Theo, a Las Vegas transplant from Cambridge, MA who is looking forward
+              to coming full-circle and attending MIT. I am
               currently a Senior in High School and I am passionate about
               networking and full stack programming, as well as embedded system
               design.

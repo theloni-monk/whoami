@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://theloni-monk.github.io/whoami/",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
     "@primer/components": "^24.0.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",

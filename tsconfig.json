@@ -23,6 +23,5 @@
 
   },
   "include": [
-    "src"
-, "tailwind.config.js"  ]
+    "src","tailwind.config.js"]
 }
