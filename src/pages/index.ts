@@ -1,9 +1,9 @@
-import Home from './Home'
-import ContactMe from './ContactMe'
-import Links from './Links'
+import HomePage from './HomePage'
+import ContactPage from './ContactPage'
+import LinkPage from './LinkPage'
 
 export {
-    Home,
-    ContactMe,
-    Links
+    HomePage as Home,
+    ContactPage as ContactMe,
+    LinkPage as Links
 }

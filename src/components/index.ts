@@ -4,11 +4,13 @@ import Intro from './Intro'
 import FixedHeader from './FixedHeader'
 import ProjectWidget from './ProjectWidget'
 import LinkWidget from './LinkWidget'
+import EmailWidget from './EmailWidget'
 export {
     Bio,
     Footer,
     Intro,
     FixedHeader,
     ProjectWidget,
-    LinkWidget
+    LinkWidget,
+    EmailWidget
 }

@@ -1,13 +1,10 @@
 import React,{useState} from 'react'
-import {Redirect} from 'react-router-dom'
 import {BorderBox, Flex, Heading} from '@primer/components'
-//TODO: add links to linkwidget
+
 const LinkWidget = (props: { icon: string, title: string, description: string, to:string }) => {
     let [redirect,setRedirect] = useState(false);
-    if(redirect) {
-        window.location.href = props.to;
-        return <div/>
-    }
+    if(redirect) window.location.href = props.to;
+        
     //TODO: add hover or smth
     return (
         <div onClick = {()=>setRedirect(true)}>

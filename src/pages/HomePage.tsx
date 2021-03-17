@@ -9,7 +9,7 @@ import {
 import {Bio, Footer, FixedHeader, Intro, ProjectWidget} from '../components'
 
 
-const Home = () => {
+const HomePage = () => {
   const [headerWidth, setHeaderwidth] = useState(50);
   const [headerHeight, setHeaderHeight] = useState(50);
 
@@ -42,7 +42,9 @@ const Home = () => {
           WRITEME: project widget section
         </Grid>
       </section>
-      <section id='technologies'>WRITEME: technologies section</section>
+      <section id='technologies'>
+        WRITEME: technologies section
+      </section>
       <section id="footer">
         <Footer />
       </section>
@@ -50,4 +52,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

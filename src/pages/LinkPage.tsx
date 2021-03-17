@@ -4,7 +4,7 @@ import '@fortawesome/fontawesome-free/css/brands.css'
 import {FixedHeader,Footer,LinkWidget} from '../components'
 const fa = require('@fortawesome/fontawesome-free/js/all.js'); // dont ask, it just works
 //TODO: add dynamic background or smth
-const Links = () => {
+const LinkPage = () => {
     /**
      * Github
      * linkedin
@@ -46,4 +46,4 @@ const Links = () => {
         </div>
     );
 };
-export default Links;
+export default LinkPage;
