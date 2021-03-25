@@ -1,5 +1,7 @@
 //stole this from ian lol
 import { Heading, Grid, Box } from '@primer/components'
+import {isMobile} from 'react-device-detect'
+
 //FIXME: broken on mobile
 interface ProjectProps {
   name: string;
@@ -21,7 +23,6 @@ const ProjectWidget = (props: ProjectProps) => {
         borderRadius: '10px',
         position: 'relative',
         display: 'grid',
-        gridTemplateColumns: '70% 30%',
         overflow: 'hidden',
         margin: '5%',
         maxHeight: '200px',
@@ -39,9 +40,9 @@ const ProjectWidget = (props: ProjectProps) => {
         }}>
           <img src = {process.env.PUBLIC_URL + '/res/' + props.image} alt = {props.name}/>
         </Box>
-      <Grid gridTemplateRows='10% 80%' gridGap={4} p='5%' sx={{position:'relative', zIndex:'1', textAlign:'left'}}>
+      <Grid gridTemplateRows={isMobile? '45% 55%':'20% 80%'}  p='5%' sx={{position:'relative', zIndex:'1', textAlign:'left'}}>
         <Heading >{props.name}</Heading>
-        <div className="description" style={{ marginTop: '10px'}} >{props.description}</div>
+        <p style={{ marginTop: '5%'}} >{props.description}</p>
       </Grid>
     </div>
   );

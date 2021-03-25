@@ -1,6 +1,8 @@
 import { Box, Heading, StyledOcticon } from '@primer/components'
 import {ChevronDownIcon} from '@primer/octicons-react'
 import {useState, useLayoutEffect} from 'react'
+import {isMobile} from 'react-device-detect'
+
 const Intro = (props: { headerOffset: number, bodHeight: number }) => {
   //TODO: maybe make it transition out
  
@@ -13,7 +15,7 @@ const Intro = (props: { headerOffset: number, bodHeight: number }) => {
       mb={0}
       minHeight={props.bodHeight - props.headerOffset}
     >
-      <Heading className='animate__animated animate__fadeIn' fontStyle="italic" color="white" fontSize="10vw" sx={{ position: 'relative', zIndex: 3,textShadow: '2px 2px 8px #000000' }}>
+      <Heading className='animate__animated animate__fadeIn' fontStyle="italic" color="white" fontSize={isMobile? "10vh":"10vw"} sx={{ position: 'relative', zIndex: 3,textShadow: '2px 2px 8px #000000' }}>
         Hi, my name is Theo
         </Heading>
       <StyledOcticon className='animate__animated animate__pulse animate__infinite'  size='large' color='white' icon={ChevronDownIcon} sx={{ position:'absolute', bottom:'20%', zIndex:3, justifySelf:'center'}}/>
