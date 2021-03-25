@@ -4,7 +4,6 @@ import {PersonIcon,MailIcon,MegaphoneIcon, CheckCircleIcon} from '@primer/octico
 import {send} from 'emailjs-com'
 import {isMobile} from 'react-device-detect'
 
-//FIXME: submit button too small on mobile
 const EmailWidget = () => {
     const [formData, setFormData] = useReducer(
         (state, newState) => ({...state, ...newState}),

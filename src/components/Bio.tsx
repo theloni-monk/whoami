@@ -3,9 +3,8 @@ import { Box, Heading, Grid } from '@primer/components'
 import {isMobile} from 'react-device-detect'
 
 const Bio = () => {
-  //TODO: add better scaling for desktop vs mobile
   //TODO: add gradient shadows on top and bottom
-  //FIXME size of whoami heading
+  //TODO: only animate in when in focus
   return (
     <Box
       color="white"
@@ -13,10 +12,11 @@ const Bio = () => {
       bg="#242424"
       sx={{ float: "left", textAlign: "left", position: 'relative', zIndex: 2}}
       id='biow'
+      className='animate__animated animate__backInUp'
     >
       <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
         <Box>
-          <Heading mr="100%" mb="5%" fontSize='5vh' sx={{ float: "left", width: "50%" }}>
+          <Heading mr="100%" mb="5%" fontSize='5vh' fontStyle="italic" sx={{ float: "left", width: "50%" }}>
             Who am I?
             </Heading>
           <img
