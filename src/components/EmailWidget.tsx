@@ -2,8 +2,9 @@ import React,{useState, useReducer} from 'react'
 import {Box, Grid, TextInput, Text, StyledOcticon, Heading, ButtonPrimary, ButtonOutline} from '@primer/components'
 import {PersonIcon,MailIcon,MegaphoneIcon, CheckCircleIcon} from '@primer/octicons-react'
 import {send} from 'emailjs-com'
+import {isMobile} from 'react-device-detect'
 
-//TODO: scale for mobile
+//FIXME: submit button too small on mobile
 const EmailWidget = () => {
     const [formData, setFormData] = useReducer(
         (state, newState) => ({...state, ...newState}),
@@ -69,7 +70,7 @@ const EmailWidget = () => {
             onChange = {(e)=>setFormData({email: e.target.value})}/>
 
             <Heading>Your Message:</Heading>
-            <TextInput as ={'textarea'} width='60%' aria-label="Message" name = "message" block={true} icon = {MegaphoneIcon} variant = 'large' placeholder = "Dear Dinesh..."
+            <TextInput as ={'textarea'} width={isMobile?'90%':'60%'} aria-label="Message" name = "message" block={true} icon = {MegaphoneIcon} variant = 'large' placeholder = "Dear Dinesh..."
             onChange={(e)=>setFormData({message:e.target.value})} />
             
             <Box sx={{visibility: error.length > 1? 'visible': 'hidden'}}>
