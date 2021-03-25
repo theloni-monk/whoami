@@ -33,7 +33,7 @@ const LinkPage = () => {
                     <Grid gridAutoRows='fit-content(20vh)' sx={{fontSize:'3vw'}}>
                         {/**FIXME: text too big on mobile */}
                         <Heading color='white' fontSize={isMobile?'2.5vh':'3vw'}>Reach me via any of the following means, or shoot me an email right now by going to the contact page</Heading>
-                        <i className="fas fa-hand-point-right fa-7x" style={{color:'white',justifySelf:'center',alignSelf:'start'}}/>
+                        <i className="fas fa-hand-point-right fa-7x animate__animated animate__headShake animate__infinite" style={{color:'white',justifySelf:'center',alignSelf:'start'}}/>
                     </Grid>
                     <Grid gridTemplateColumns='repeat(1,auto)' justifyContent='center' gridGap={4}>
                         <LinkWidget icon='fab fa-linkedin fa-5x' title='Linkedin' description='Check out my linkedin page for professional inquires' to='https://www.linkedin.com/in/thelonious-cooper-88000a178/'/>

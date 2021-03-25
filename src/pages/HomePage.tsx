@@ -6,7 +6,7 @@ import {
   Heading
 } from "@primer/components";
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
-
+import {isMobile} from 'react-device-detect'
 
 
 import { Bio, Footer, FixedHeader, Intro, ProjectWidget } from '../components'
@@ -50,9 +50,8 @@ const HomePage = () => {
           height:'100%',
           transition: '0.2s',
           transform:'scale(1.1)'
-          
         }}>
-          <img src={process.env.PUBLIC_URL + '/res/skyline_sharp.jpg'} alt='vegas skyline' style={{minHeight: 300, height: '100%',}}/>
+          <img src={process.env.PUBLIC_URL + '/res/skyline_sharp.jpg'} alt='vegas skyline' style={{minHeight: 300, height: '100%'}}/>
         {/**TODO: get higher-res image */}
         </Box>
       </section>
@@ -64,13 +63,13 @@ const HomePage = () => {
       </section>
       <section id="projects">
         <Box mt="5%" p="5%" sx={{ position: 'relative' }}>
-          <Heading textAlign="left" color="white">
-            Featured Projects
+          <Heading textAlign="left" fontStyle="italic" fontSize = '5vh' color="white">
+            Featured Projects:
             </Heading>
         </Box>
-        <Grid gridTemplateColumns="repeat(3, auto)" gridGap='2%' p='5%'>
-          <ProjectWidget name='rpistream' image='rpistream.png' isLogo={false} description='yada yada' href='https://pypi.org/project/rpistream/' />
-          <ProjectWidget name='rpistream' image='rpistream.png' isLogo={false} description='yada yada' href='https://pypi.org/project/rpistream/' />
+        <Grid gridTemplateColumns={isMobile?"repeat(1,auto)":"50% 50%"} gridGap='5%' p='5%' m = '3%' pt = {0} mt = {0} justifyItems='center'>
+          <ProjectWidget name='RPiStream' image='rpistream.png' isLogo={false} description='Realtime video-streaming library written in python designed to be lightweight enough to run well on a raspberry pi' href='https://pypi.org/project/rpistream/' />
+          <ProjectWidget name='MOS 6502 Emulator' image='6502.jpg' isLogo={false} description='An emulator for the iconic MOS 6502 CPU written in C++' href='https://pypi.org/project/rpistream/' />
 
         </Grid>
       </section>
