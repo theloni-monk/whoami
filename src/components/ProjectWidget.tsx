@@ -2,7 +2,6 @@
 import { Heading, Grid, Box } from '@primer/components'
 import {isMobile} from 'react-device-detect'
 
-//FIXME: broken on mobile
 interface ProjectProps {
   name: string;
   image?: string;
@@ -13,9 +12,7 @@ interface ProjectProps {
 const ProjectWidget = (props: ProjectProps) => {
 
   return (
-    <div className="project" onClick={() => {
-      window.location.href = props.href;
-    }}
+    <div className="hover-grow" onClick={() => {window.location.href = props.href;}} 
       style={{
         color: 'white',
         width: '100%',
@@ -26,7 +23,10 @@ const ProjectWidget = (props: ProjectProps) => {
         overflow: 'hidden',
         margin: '5%',
         maxHeight: '200px',
-        padding:'2%'
+        padding:'2%',
+        userSelect:'none',
+        cursor:'pointer',
+        transition:'0.1s'
       }}>
         <Box sx={{
           position:'absolute',
@@ -48,20 +48,3 @@ const ProjectWidget = (props: ProjectProps) => {
   );
 }
 export default ProjectWidget;
-/**
- * .project {
-    height: 100px;
-    margin: 40px;
-    @extend %box;
-
-    h1 {
-        margin: 0;
-        font-size: 18pt;
-    }
-
-
-    transition: 0.3s;
-    user-select: none;
-    cursor: pointer;
-}
- */
