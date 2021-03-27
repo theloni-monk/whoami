@@ -58,22 +58,22 @@ const EmailWidget = () => {
         )
     }
     return(
-        <Grid m='5%'>
+        <Grid m='5%' color='white'>
             <Heading>Your Name: </Heading>
-            <TextInput width='60%' aria-label="Name" name="name" icon={PersonIcon} placeholder="Bertram Gilfoyle" 
+            <TextInput color='white' width='60%' aria-label="Name" name="name" icon={PersonIcon} placeholder="Bertram Gilfoyle" 
             onChange={(e)=>setFormData({name:e.target.value})}/>
 
             <Heading>Your Email:</Heading>
             <Heading fontSize={1} color='grey' pb='1%'> (I'm too lazy to validate the email so please just put a real one)</Heading>
-            <TextInput width='60%' aria-label="Email" name="email" icon = {MailIcon} placeholder="b.gilfoyle@piedpiper.com" contrast 
+            <TextInput color='white' width='60%' aria-label="Email" name="email" icon = {MailIcon} placeholder="b.gilfoyle@piedpiper.com"
             onChange = {(e)=>setFormData({email: e.target.value})}/>
 
             <Heading>Your Message:</Heading>
-            <TextInput as ={'textarea'} width={isMobile?'90%':'60%'} aria-label="Message" name = "message" block={true} icon = {MegaphoneIcon} variant = 'large' placeholder = "Dear Dinesh..."
+            <TextInput color='white' as ={'textarea'} width={isMobile?'90%':'60%'} aria-label="Message" name = "message" block={true} icon = {MegaphoneIcon} variant = 'large' placeholder = "Dear Dinesh..."
             onChange={(e)=>setFormData({message:e.target.value})} />
             
-            <Box sx={{visibility: error.length > 1? 'visible': 'hidden'}}>
-                <Text color='red' m ='3%'>{error}</Text>
+            <Box p='2%' sx={{visibility: error.length > 1? 'visible': 'hidden',textAlign:'left'}}>
+                <Text color='red' >{error}</Text>
             </Box>
             <ButtonPrimary width='20%' variant = 'medium' onClick={submit}>Send!</ButtonPrimary>
         </Grid>

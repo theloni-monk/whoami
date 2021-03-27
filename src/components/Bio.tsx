@@ -10,7 +10,7 @@ const Bio = () => {
       color="white"
       p="5%"
       bg="#242424"
-      sx={{ float: "left", textAlign: "left", position: 'relative', zIndex: 2}}
+      sx={{ float: "left", textAlign: "left", position: 'relative', zIndex: 2, boxShadow: '0px 10px 5px #0000002a, 0px -10px 5px #0000002a'}}
       id='biow'
       className='animate__animated animate__backInUp'
     >
@@ -20,6 +20,7 @@ const Bio = () => {
             Who am I?
             </Heading>
           <img
+            className='hover-grow'
             style={{ borderRadius: "20px" }}
             width="80%"
             src={process.env.PUBLIC_URL + '/res/headshot.jpg'}
