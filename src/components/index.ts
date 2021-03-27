@@ -5,6 +5,7 @@ import FixedHeader from './FixedHeader'
 import ProjectWidget from './ProjectWidget'
 import LinkWidget from './LinkWidget'
 import EmailWidget from './EmailWidget'
+import NiceBackground from './NiceBackground'
 export {
     Bio,
     Footer,
@@ -12,5 +13,6 @@ export {
     FixedHeader,
     ProjectWidget,
     LinkWidget,
-    EmailWidget
+    EmailWidget,
+    NiceBackground
 }
