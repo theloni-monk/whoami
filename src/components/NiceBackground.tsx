@@ -1,7 +1,7 @@
 import { Fixed } from '@primer/components'
 import {useState, useLayoutEffect} from 'react'
 const NiceBackground = (props: any) => {
-    const [initHeight, setInitHeight] = useState(window.innerHeight);
+    const [initHeight] = useState(window.innerHeight);
     const[headOffset, setHeadOffset] = useState(0);
     useLayoutEffect(()=>{
         setHeadOffset(document.getElementById('head')?.clientHeight as number)

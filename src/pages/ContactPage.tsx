@@ -32,7 +32,7 @@ const ContactPage = () => {
                 <Grid gridTemplateColumns={isMobile ? 'repeat(1,auto)' : 'repeat(2,auto)'} sx={{ position: 'relative', zIndex: 3 }}>
                     <Box>
                         <Heading m='5%' mb='2%' color='white'>Tell Me Something!</Heading>
-                        <Heading fontSize={3} color='grey' p='5%' pt='0'>I'll get back to you in 2-3 business days garunteed</Heading>
+                        <Heading fontSize={3} color='grey' p='5%' pt='0'>I'll get back to you in 2-3 business days guaranteed</Heading>
                     </Box>
                     <EmailWidget />
                 </Grid>

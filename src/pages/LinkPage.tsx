@@ -1,11 +1,10 @@
 import React, { useState, useLayoutEffect } from 'react'
-import { BorderBox, Box, Grid, Heading } from '@primer/components'
+import { BorderBox, Grid, Heading } from '@primer/components'
 import '@fortawesome/fontawesome-free/css/brands.css'
 import { FixedHeader, NiceBackground, Footer, LinkWidget } from '../components'
 import { isMobile } from 'react-device-detect'
-
 const fa = require('@fortawesome/fontawesome-free/js/all.js'); // dont ask, it just works
-//TODO: add dynamic background or smth
+
 const LinkPage = () => {
     /**
      * Github

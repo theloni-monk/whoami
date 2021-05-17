@@ -3,8 +3,6 @@ import { Box, Heading, Grid } from '@primer/components'
 import {isMobile} from 'react-device-detect'
 
 const Bio = () => {
-  //TODO: add gradient shadows on top and bottom
-  //TODO: only animate in when in focus
   return (
     <Box
       color="white"

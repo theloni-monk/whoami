@@ -1,8 +1,8 @@
 {
-  "name": "tailwind-react",
+  "name": "whoami",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://theloni-monk.github.io/whoami/",
+  "homepage": "https://whoami.theloniouscoop.dev",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
     "@n8tb1t/use-scroll-position": "^2.0.3",

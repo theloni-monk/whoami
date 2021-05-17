@@ -5,9 +5,7 @@ import {isMobile} from 'react-device-detect'
 const LinkWidget = (props: { icon: string, title: string, description: string, to:string }) => {
     const [redirect,setRedirect] = useState(false);
     if(redirect) window.location.href = props.to;
-
-        
-    //TODO: add hover or smth
+    
     return (
         <div className="hover-grow" onClick = {()=>setRedirect(true)}  style={{ userSelect:'none', cursor:'pointer'}}>
             <BorderBox borderWidth='5px' width={isMobile?'80%':'60%'} bg='#495057' color='white' p={isMobile?'5%':''}  pl='5%' pr='5%' borderColor='grey'  margin='auto' sx={{transition:'0.1s'}}>

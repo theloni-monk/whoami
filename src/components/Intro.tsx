@@ -3,7 +3,6 @@ import {ChevronDownIcon} from '@primer/octicons-react'
 import {isMobile} from 'react-device-detect'
 
 const Intro = (props: { headerOffset: number, bodHeight: number }) => {
-  //TODO: maybe make it transition out
   return (
     <Box
       sx={{  position: 'relative',display:'grid', zIndex: 0 }}
