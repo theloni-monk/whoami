@@ -6,6 +6,7 @@ import ProjectWidget from './ProjectWidget'
 import LinkWidget from './LinkWidget'
 import EmailWidget from './EmailWidget'
 import NiceBackground from './NiceBackground'
+import TechWidget from './TechWidget'
 export {
     Bio,
     Footer,
@@ -14,5 +15,6 @@ export {
     ProjectWidget,
     LinkWidget,
     EmailWidget,
-    NiceBackground
+    NiceBackground,
+    TechWidget
 }
