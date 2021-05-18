@@ -62,7 +62,7 @@ const HomePage = () => {
       <section id='technologies'>
       <Box mt="0" p="5%" sx={{ position: 'relative' }}>
           <Heading textAlign="left" fontStyle="italic" fontSize = '5vh' color="white">
-            Technological Profeciencies:
+            Technological Proficiencies:
             </Heading>
         </Box>
         <Grid gridTemplateColumns={isMobile?"50% 50%":"33% 33% 33%"} gridGap='5%' justifyItems='center' minHeight={isMobile?'120vw':'80vh'} p='5%'  ml = {0} pt = {0} mt = {0} >
