@@ -20,19 +20,17 @@ const Bio = () => {
           <img
             className='hover-grow'
             style={{ borderRadius: "20px" }}
-            width="80%"
+            width="90%"
             src={process.env.PUBLIC_URL + '/res/headshot.jpg'}
             alt='me'
           />
         </Box>
         <Box mr="5%">
           <p style={{ textIndent: "1em", fontSize: isMobile?"2.2vh":"3.25vw" }}>
-            I am Theo, a Las Vegas transplant from Cambridge, MA who is looking forward
-            to coming full-circle and attending MIT. I am
-            currently a Senior in High School and I am passionate about
-            networking and full stack programming, as well as embedded system
-            design.
-            </p>
+            I am Theo, I grew up in Cambridge, MA and Las Vegas, NV. I am currently a Freshman at MIT. I am passionate about
+            both full stack webdev and embedded system design. I like making code that does stuff, i.e. has some robotic or A/V results. 
+            Itching to know more? Learn more through my links in the links tab.
+          </p>
         </Box>
       </Grid>
     </Box>

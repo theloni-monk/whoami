@@ -15,4 +15,4 @@ Like to know more? Contact me through the website or one of the links I have pos
 
 ----------------------
 
-***side note:*** this website is pretty blatantly over-engineered, I could achieve the same thing with a single html page and some bootstrap, but I wanted to demonstrate my proficency with more scalable web technologies like ReactJs
+***side note:*** this website is pretty blatantly over-engineered, I could achieve the same thing with jquery and some bootstrap, but I wanted to demonstrate my proficency with more scalable web technologies like ReactJs

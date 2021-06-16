@@ -8,7 +8,7 @@ const LinkWidget = (props: { icon: string, title: string, description: string, t
     
     return (
         <div className="hover-grow" onClick = {()=>setRedirect(true)}  style={{ userSelect:'none', cursor:'pointer'}}>
-            <BorderBox borderWidth='5px' width={isMobile?'80%':'60%'} bg='#495057' color='white' p={isMobile?'5%':''}  pl='5%' pr='5%' borderColor='grey'  margin='auto' sx={{transition:'0.1s'}}>
+            <BorderBox borderWidth='5px' width={isMobile?'80%':'60%'} bg='#495057' color='white' p={isMobile?'5%':''}  pl='5%' pr='5%' borderColor='grey' borderRadius='5%' margin='auto' sx={{transition:'0.1s'}}>
                 <Flex width='100%' marginBottom='5%' >
                     <i className={props.icon} style={{fontSize:'7vw', margin:'auto', paddingTop:'2%'}}/>
                     <Heading pl='10px' margin='auto' sx={{width:'100%'}} textAlign='center' fontSize='4vw' pr='10px'>{props.title}</Heading>

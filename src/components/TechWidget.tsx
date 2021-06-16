@@ -1,4 +1,4 @@
-import { Heading, Grid, BorderBox } from '@primer/components'
+import {BorderBox } from '@primer/components'
 
 interface TechProps{
     name: string,

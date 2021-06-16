@@ -6,15 +6,18 @@ const Intro = (props: { headerOffset: number, bodHeight: number }) => {
   return (
     <Box
       sx={{  position: 'relative',display:'grid', zIndex: 0 }}
-      padding={"10%"}
+      padding={"7%"}
       mt={props.headerOffset + "px"}
       mb={0}
       minHeight={isMobile?props.bodHeight: props.bodHeight - props.headerOffset}
     >
-      <Heading className='animate__animated animate__fadeIn' fontStyle="italic" color="white" fontSize={isMobile? "10vh":"10vw"} sx={{ position: 'relative', zIndex: 3,textShadow: '2px 2px 8px #000000' }}>
-        Hi, my name is Theo
+      <Heading className='animate__animated animate__fadeIn' fontStyle="italic" color="white" fontSize={isMobile? "8vh":"10vw"} sx={{ position: 'relative', zIndex: 3,textShadow: '2px 2px 8px #000000' }}>
+        Hi, my name is Theo. 
         </Heading>
-      <StyledOcticon className='animate__animated animate__pulse animate__infinite'  size='large' color='white' icon={ChevronDownIcon} sx={{ position:'absolute', bottom:'15%', zIndex:3, justifySelf:'center'}}/>
+        <Heading className='animate__animated animate__fadeIn' fontStyle="italic" color="white" fontSize={isMobile? "5vh":"5vw"} sx={{ position: 'relative', zIndex: 3,textShadow: '2px 2px 8px #000000' }}>
+        I code things that do stuff.
+        </Heading>
+      <StyledOcticon className='animate__animated animate__pulse animate__infinite'  size='large' color='white' icon={ChevronDownIcon} sx={{ position:'absolute', bottom:'5%', zIndex:3, justifySelf:'center'}}/>
     </Box>
   );
 };

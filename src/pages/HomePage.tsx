@@ -39,7 +39,6 @@ const HomePage = () => {
     <div className="App height=100% margin-bottom=50px">
       <FixedHeader/>
       <section id="header">
-        
         <NiceBackground blur={scrollBlur} />
       </section>
       <section id="intro">
@@ -54,7 +53,9 @@ const HomePage = () => {
             Featured Projects:
             </Heading>
         </Box>
-        <Grid gridTemplateColumns={isMobile?"repeat(1,auto)":"50% 50%"} gridGap='5%' p='5%' pb='0' m = '3%' pt = {0} mb='0' mt = {0} justifyItems='center'>
+        <Grid gridTemplateColumns={isMobile?"repeat(1,auto)":"50% 50%"} gridGap='5%' p='5%' pb='0' m = '3%' pt = {0} mb={isMobile?'25%':0} mt = {0} justifyItems='center'>
+          <ProjectWidget name='Julia/Mandelbrot Set Explorer' image='mandelbrot.jpg' isLogo={false} description='Have fun exploring the complex pheomena of the Julia/Mandelbrot sets. Written as a WebGL 2.0 shader. Mobile not supported.' href='https://theloni-monk.github.io/Julia-GL/' />
+          <ProjectWidget name='WaveSculptr Synthesizer' image='wavesculptr.jpg' isLogo={false} description='Bored of Sin or Square waves in your synthesizer? Draw your own waveforms and try something new. Mobile not supported.' href='https://theloni-monk.github.io/WaveSculptr_1.0/' />
           <ProjectWidget name='RPiStream' image='rpistream.png' isLogo={false} description='Realtime video-streaming library written in python designed to be lightweight enough to run well on a raspberry pi' href='https://pypi.org/project/rpistream/' />
           <ProjectWidget name='MOS 6502 Emulator' image='6502.jpg' isLogo={false} description='An emulator for the iconic MOS 6502 CPU written in C++' href='https://github.com/theloni-monk/YA6502E' />
         </Grid>

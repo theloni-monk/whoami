@@ -41,8 +41,8 @@ const ProjectWidget = (props: ProjectProps) => {
           <img src = {process.env.PUBLIC_URL + '/res/' + props.image} alt = {props.name}/>
         </Box>
       <Grid gridTemplateRows={isMobile? '45% 55%':'20% 80%'}  p='5%' sx={{position:'relative', zIndex:'1', textAlign:'left'}}>
-        <Heading >{props.name}</Heading>
-        <p style={{ marginTop: '5%'}} >{props.description}</p>
+        <Heading sx={{textShadow: '2px 2px 8px #000000'}}>{props.name}</Heading>
+        <p style={{ marginTop: '5%', textShadow: '2px 2px 8px #000000'}} >{props.description}</p>
       </Grid>
     </div>
   );
