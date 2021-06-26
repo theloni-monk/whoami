@@ -1,14 +1,19 @@
 import { Fixed } from '@primer/components'
-import {useState, useLayoutEffect} from 'react'
+import {useState, useEffect} from 'react'
+import {skyline} from '../images'
+import Image from 'next/image'
 const NiceBackground = (props: any) => {
-    const [initHeight] = useState(window.innerHeight);
+    const [initHeight, setInitHeight] = useState(1280);
+    useEffect(()=>setInitHeight(window.innerHeight),[])
     const[headOffset, setHeadOffset] = useState(0);
-    useLayoutEffect(()=>{
+    useEffect(()=>{
         setHeadOffset(document.getElementById('head')?.clientHeight as number)
     },[headOffset])
 
-    const blur: number = props.blur || 5;
+    const blur: number = props.blur || 2;
     return (
+        <div>
+        
         <Fixed sx={{
             overflow: 'hidden',
             position: 'fixed', zIndex: '0!important',
@@ -19,8 +24,14 @@ const NiceBackground = (props: any) => {
             top: headOffset,
             left: 0
         }}>
-            <img src={process.env.PUBLIC_URL + '/res/skyline_sharp.jpg'} alt='vegas skyline' style={{ minHeight: 300, height: '100%', margin: 0 }} />
+            <Image 
+            src={skyline} alt='vegas skyline' layout='fixed' loading='eager'
+            height= {initHeight}
+            />
+            
             {/**TODO: get higher-res image */}
-        </Fixed>);
+        </Fixed>
+        </div>
+        );
 }
 export default NiceBackground;

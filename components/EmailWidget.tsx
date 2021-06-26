@@ -64,7 +64,7 @@ const EmailWidget = () => {
             onChange={(e)=>setFormData({name:e.target.value})}/>
 
             <Heading>Your Email:</Heading>
-            <Heading fontSize={1} color='grey' pb='1%'> (I'm too lazy to validate the email so please just put a real one)</Heading>
+            <Heading fontSize={1} color='grey' pb='1%'> (I&apos;m too lazy to validate the email so please just put a real one)</Heading>
             <TextInput color='white' width='60%' aria-label="Email" name="email" icon = {MailIcon} placeholder="b.gilfoyle@piedpiper.com"
             onChange = {(e)=>setFormData({email: e.target.value})}/>
 
