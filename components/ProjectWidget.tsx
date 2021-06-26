@@ -40,7 +40,7 @@ const ProjectWidget = (props: ProjectProps) => {
           filter:'blur(2px)',
           overflow:'hidden'
         }}>
-          <Image src = {props.image} alt = {props.name} layout='intrinsic'/>
+          <Image src = {props.image} placeholder='blur' alt = {props.name} layout='intrinsic'/>
         </Box>
       <Grid gridTemplateRows={isMobile? '45% 55%':'20% 80%'}  p='5%' sx={{position:'relative', zIndex:'1', textAlign:'left'}}>
         <Heading sx={{textShadow: '2px 2px 8px #000000'}}>{props.name}</Heading>

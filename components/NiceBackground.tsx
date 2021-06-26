@@ -2,6 +2,8 @@ import { Fixed } from '@primer/components'
 import {useState, useEffect} from 'react'
 import {skyline} from '../images'
 import Image from 'next/image'
+
+//TODO: fix aspect ratio of background
 const NiceBackground = (props: any) => {
     const [initHeight, setInitHeight] = useState(1280);
     useEffect(()=>setInitHeight(window.innerHeight),[])
@@ -25,7 +27,10 @@ const NiceBackground = (props: any) => {
             left: 0
         }}>
             <Image 
-            src={skyline} alt='vegas skyline' layout='fixed' loading='eager'
+            src={skyline} alt='vegas skyline' 
+            layout='fixed' 
+            priority={true} 
+            placeholder='blur'
             height= {initHeight}
             />
             

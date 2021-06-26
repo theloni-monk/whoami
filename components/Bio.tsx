@@ -23,6 +23,8 @@ const Bio = ({isMobile}) => {
               layout='intrinsic'
               src={headshot}
               alt='me'
+              priority={true} 
+              placeholder='blur'
             />
           </div>
         </Box>

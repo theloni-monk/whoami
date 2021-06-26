@@ -6,7 +6,11 @@ import Head from 'next/head'
 
 const FixedHeader = ({ isMobile }) => {
   const [width, setWidth] = useState(1000);
-  useEffect(() => setWidth(window.innerWidth), [])
+  useEffect(() =>{ 
+    setWidth(window.innerWidth);
+    document.documentElement.lang = "en-us";
+  }
+  , [])
   //FIXME: fix PWA SEO - manifest not loading
   //TODO implemenent all the pwa stuff like sitemap and whatnot
   return (
@@ -18,7 +22,7 @@ const FixedHeader = ({ isMobile }) => {
         <meta charSet='utf-8' />
         <meta name="theme-color" content="#000000" />
         <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
-        <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' />
+        <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5' />
         <meta name='description' content='Portfolio Page for Thelonious Cooper' />
         <meta name='keywords' content='Theo Cooper Thelonious Web Dev Full Stack Programming Developer React NextJs Github NuVu MIT' />
         <title>Theo&apos;s Portfolio</title>
