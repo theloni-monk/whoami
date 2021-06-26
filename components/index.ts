@@ -1,6 +1,6 @@
 import Bio from './Bio'
 import Footer from './Footer'
-import Intro from './Intro'
+import Greeter from './Greeter'
 import FixedHeader from './FixedHeader'
 import ProjectWidget from './ProjectWidget'
 import LinkWidget from './LinkWidget'
@@ -10,7 +10,7 @@ import TechWidget from './TechWidget'
 export {
     Bio,
     Footer,
-    Intro,
+    Greeter as Intro,
     FixedHeader,
     ProjectWidget,
     LinkWidget,

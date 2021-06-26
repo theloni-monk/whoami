@@ -1,10 +1,12 @@
 //stole this from ian lol
 import { Heading, Grid, Box } from '@primer/components'
 import {isMobile} from 'react-device-detect'
+import Image from 'next/image'
+import Link from 'next/link'
 
 interface ProjectProps {
   name: string;
-  image?: string;
+  image?: any;
   isLogo?: boolean;
   description: string;
   href: string;
@@ -38,7 +40,7 @@ const ProjectWidget = (props: ProjectProps) => {
           filter:'blur(2px)',
           overflow:'hidden'
         }}>
-          <img src = {process.env.PUBLIC_URL + '/res/' + props.image} alt = {props.name}/>
+          <Image src = {props.image} alt = {props.name} layout='intrinsic'/>
         </Box>
       <Grid gridTemplateRows={isMobile? '45% 55%':'20% 80%'}  p='5%' sx={{position:'relative', zIndex:'1', textAlign:'left'}}>
         <Heading sx={{textShadow: '2px 2px 8px #000000'}}>{props.name}</Heading>
