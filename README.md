@@ -1,5 +1,5 @@
 # whoami
-A simple portfolio / reference page for me, Theo Cooper.
+A portfolio / reference page for me, Theo Cooper.
 
 ----------------------
 
@@ -15,4 +15,4 @@ Like to know more? Contact me through the website or one of the links I have pos
 
 ----------------------
 
-***side note:*** this website is pretty blatantly over-engineered, I could achieve the same thing with jquery and some bootstrap, but I wanted to demonstrate my proficency with more scalable web technologies like ReactJs
+***side note:*** this website is pretty blatantly over-engineered, I could achieve the same thing with jquery and some bootstrap, but I wanted to demonstrate my proficency with more scalable web technologies like NextJs and React

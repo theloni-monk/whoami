@@ -41,6 +41,7 @@ const HomePage = (props: { isMobile: boolean }) => {
         </Box>
         <Grid gridTemplateColumns={props.isMobile ? "repeat(1,auto)" : "50% 50%"} gridGap='5%' p='5%' pb='0' m='3%' pt={0} mb={props.isMobile ? '25%' : 0} mt={0} justifyItems='center'>
           <ProjectWidget name='Julia/Mandelbrot Set Explorer' image={Images.mandelbrot} isLogo={false} description='Have fun exploring the complex pheomena of the Julia/Mandelbrot sets. Written as a WebGL 2.0 shader. Mobile not supported.' href='https://theloni-monk.github.io/Julia-GL/' />
+          {/* FIXME: wavescultr pic broken */}
           <ProjectWidget name='WaveSculptr Synthesizer' image={Images.wavescultr} isLogo={false} description='Bored of Sin or Square waves in your synthesizer? Draw your own waveforms and try something new. Mobile not supported.' href='https://theloni-monk.github.io/WaveSculptr_1.0/' />
           <ProjectWidget name='RPiStream' image={Images.rpistream} isLogo={false} description='Realtime video-streaming library written in python designed to be lightweight enough to run well on a raspberry pi' href='https://pypi.org/project/rpistream/' />
           <ProjectWidget name='MOS 6502 Emulator' image={Images.sixfiveohtwo} isLogo={false} description='An emulator for the iconic MOS 6502 CPU written in C++' href='https://github.com/theloni-monk/YA6502E' />

@@ -8,7 +8,7 @@ import rpistream from './rpistream.png'
 import reactpic from './react.png'
 import rpilogo from './rpi_logo.jpeg'
 import wavescultr from './wavesculptr.jpg'
-import skyline from './skyline_sharp.jpg'
+import skyline from './skyline_cambridge.jpg'
 import headshot from './headshot.jpg'
 export {
     sixfiveohtwo,

@@ -6,6 +6,7 @@ const Greeter = (props: { headerOffset: number, bodHeight: number, isMobile:bool
     <Box
       sx={{  position: 'relative',display:'grid', zIndex: 0 }}
       padding={"7%"}
+      pt={"1%"}
       mt={props.headerOffset + "px"}
       mb={0}
       minHeight={props.isMobile? props.bodHeight: props.bodHeight - props.headerOffset}

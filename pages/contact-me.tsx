@@ -31,10 +31,10 @@ const ContactPage = (props: { isMobile: boolean }) => {
             <FixedHeader isMobile={props.isMobile} />
             <Box mt={headerHeight} height={props.isMobile ? '100%' : bodyHeight}>
                 <NiceBackground />
-                <Grid gridTemplateColumns={props.isMobile ? 'repeat(1,auto)' : 'repeat(2,auto)'} sx={{ position: 'relative', zIndex: 3 }}>
+                <Grid gridTemplateColumns={props.isMobile ? 'repeat(1,auto)' : 'repeat(2,auto)'} sx={{ position: 'relative', zIndex: 3 ,textShadow: '2px 2px 8px #000000'}}>
                     <Box>
                         <Heading m='5%' mb='2%' color='white'>Tell Me Something!</Heading>
-                        <Heading fontSize={3} color='grey' p='5%' pt='0'>I&#39;ll get back to you in 2-3 business days guaranteed</Heading>
+                        <Heading fontSize={3} color='grey' p='5%' pt='0' sx={{textShadow:'2px 2px 4px #000000'}}>I&#39;ll get back to you in 2-3 business days guaranteed</Heading>
                     </Box>
                     <EmailWidget />
                 </Grid>

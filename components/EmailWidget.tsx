@@ -58,13 +58,12 @@ const EmailWidget = () => {
         )
     }
     return(
-        <Grid m='5%' color='white'>
+        <Grid m='5%' color='white' sx={{textShadow: '2px 2px 8px #000000'}} >
             <Heading>Your Name: </Heading>
             <TextInput color='white' width='60%' aria-label="Name" name="name" icon={PersonIcon} placeholder="Bertram Gilfoyle" 
             onChange={(e)=>setFormData({name:e.target.value})}/>
 
             <Heading>Your Email:</Heading>
-            <Heading fontSize={1} color='grey' pb='1%'> (I&apos;m too lazy to validate the email so please just put a real one)</Heading>
             <TextInput color='white' width='60%' aria-label="Email" name="email" icon = {MailIcon} placeholder="b.gilfoyle@piedpiper.com"
             onChange = {(e)=>setFormData({email: e.target.value})}/>
 

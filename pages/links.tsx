@@ -26,7 +26,7 @@ const LinkPage = (props: { isMobile: boolean }) => {
             <FixedHeader isMobile={props.isMobile} />
             <BorderBox mt={headerHeight} justifyContent='center' height='100%' alignContent='center' p='5%' >
                 <NiceBackground />
-                <Grid gridTemplateColumns='repeat(2,auto)' sx={{ position: 'relative', zIndex: 1 }}>
+                <Grid gridTemplateColumns='repeat(2,auto)' sx={{ position: 'relative', zIndex: 1 ,textShadow: '2px 2px 8px #000000'}}>
                     <Grid gridAutoRows='fit-content(20vh)' sx={{ fontSize: '3vw' }}>
                         {/**FIXME: text too big on mobile */}
                         <Heading color='white' fontSize={props.isMobile ? '2.5vh' : '3vw'}>Reach me via any of the following means, or shoot me an email right now by going to the contact page</Heading>

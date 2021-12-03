@@ -27,13 +27,12 @@ const NiceBackground = (props: any) => {
             left: 0
         }}>
             <Image 
-            src={skyline} alt='vegas skyline' 
+            src={skyline} alt='cambridge skyline' 
             layout='fixed' 
             priority={true} 
             placeholder='blur'
             height= {initHeight}
             />
-            
             {/**TODO: get higher-res image */}
         </Fixed>
         </div>
