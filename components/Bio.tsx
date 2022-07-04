@@ -31,7 +31,7 @@ const Bio = ({isMobile}) => {
         </Box>
         <Box mr="5%">
           <p style={{ textIndent: "2.5vw", fontSize: isMobile ? "1.75vh" : "2.25vw", marginTop: "4.75vw" }}>
-            I am Theo, I grew up in Cambridge, MA and Las Vegas, NV. I am currently Sophomore undergrad in the Electrical Engineering department of MIT. I am passionate about
+            I am Thelonious (aka Theo), I grew up in Cambridge, MA and Las Vegas, NV. I am currently Sophomore undergrad in the Electrical Engineering department of MIT. I am passionate about
             both machine learning and embedded system design. I am an undergraduate researcher in the Earth Signals and Systems Group at MIT EAPS and the Human-Computer Interaction Engineering Group at CSAIL.
           </p>
         </Box>
