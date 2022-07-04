@@ -11,6 +11,7 @@ const HomePage = (props: { isMobile: boolean }) => {
 
   //make sure the fixed header doesn't overlap the intro
   useEffect(() => {
+    //TODO: refactor height calcs to css
     setHeaderHeight(document.getElementById("head")?.clientHeight as number);
     setBioHeight(document.getElementById('biow')?.clientHeight as number);
     setBodHeight(document.getElementById('__next')?.clientHeight as number - headerHeight);
@@ -36,7 +37,7 @@ const HomePage = (props: { isMobile: boolean }) => {
       <section id="projects">
         <Box mt='0' pb='0' p="5%" sx={{ position: 'relative' }}>
           <Heading textAlign="left" fontStyle="italic" fontSize='5vh' color="white">
-            Featured Projects:
+            Featured Personal Projects:
           </Heading>
         </Box>
         <Grid gridTemplateColumns={props.isMobile ? "repeat(1,auto)" : "50% 50%"} gridGap='5%' p='5%' pb='0' m='3%' pt={0} mb={props.isMobile ? '25%' : 0} mt={0} justifyItems='center'>
@@ -55,10 +56,10 @@ const HomePage = (props: { isMobile: boolean }) => {
         </Box>
         {/**The tech widgets are clipping on true mobile but not when simulated in firefox */}
         <Grid gridTemplateColumns={props.isMobile ? "50% 50%" : "33% 33% 33%"} gridGap='5%' justifyItems='center' minHeight={props.isMobile ? '120vw' : '80vh'} p='5%' ml={0} pt={0} mt={0} >
+          <TechWidget name='C++' image={Images.cpp} height={twHeight} href='https://en.cppreference.com/w/cpp/language' />
           <TechWidget name='ReactJs' image={Images.reactpic} height={twHeight} href='https://reactjs.org/' />
           <TechWidget name='Python' image={Images.python} height={twHeight} href='https://www.python.org/' />
           <TechWidget name='NodeJs' image={Images.nodejs} height={twHeight} href='https://nodejs.org/en/' />
-          <TechWidget name='C++' image={Images.cpp} height={twHeight} href='https://en.cppreference.com/w/cpp/language' />
           <TechWidget name='Raspberry Pi' image={Images.rpilogo} height={twHeight} href='https://www.raspberrypi.org/' />
           <TechWidget name='Java' image={Images.java} height={twHeight} href='https://www.java.com/en/' />
         </Grid>

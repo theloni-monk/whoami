@@ -12,7 +12,7 @@ const Greeter = (props: { headerOffset: number, bodHeight: number, isMobile:bool
       minHeight={props.isMobile? props.bodHeight: props.bodHeight - props.headerOffset}
     >
       <Heading className='animate__animated animate__fadeIn' fontStyle="italic" color="white" fontSize={props.isMobile? "8vh":"10vw"} sx={{ position: 'relative', zIndex: 3,textShadow: '2px 2px 8px #000000' }}>
-        Hi, my name is Theo. 
+        Hi, my name is Thelonious. 
         </Heading>
         <Heading className='animate__animated animate__fadeIn' fontStyle="italic" color="white" fontSize={props.isMobile? "5vh":"5vw"} sx={{ position: 'relative', zIndex: 3,textShadow: '2px 2px 8px #000000' }}>
         I code things that do stuff.
