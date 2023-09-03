@@ -7,7 +7,7 @@ import python from './python.jpg'
 import rpistream from './rpistream.png'
 import reactpic from './react.png'
 import rpilogo from './rpi_logo.jpeg'
-import wavescultr from './wavesculptr.jpg'
+import pitch2synth from './pitch2synth.png'
 import skyline from './skyline_cambridge.jpg'
 import headshot from './bestheadshot_small.png'
 export {
@@ -20,7 +20,7 @@ export {
     rpilogo,
     rpistream,
     reactpic,
-    wavescultr,
+    pitch2synth,
     skyline,
     headshot
 }

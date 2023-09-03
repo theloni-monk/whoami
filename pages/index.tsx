@@ -34,7 +34,7 @@ const HomePage = () => {
   return (
     <div className="App height=100% margin-bottom=50px">
       <FixedHeader isMobile={mobile} />
-      <section id="header">
+      <section id="background">
         <NiceBackground />
       </section>
       <section id="intro">
@@ -51,7 +51,7 @@ const HomePage = () => {
         </Box>
         <Grid gridTemplateColumns={mobile ? "repeat(1,auto)" : "50% 50%"} gridGap='5%' p='5%' pb='0' m='3%' pt={0} mb={mobile ? '25%' : 0} mt={0} justifyItems='center'>
           <ProjectWidget name='Julia/Mandelbrot Set Explorer' image={Images.mandelbrot} isLogo={false} description='Have fun exploring the complex pheomena of the Julia/Mandelbrot sets. Written as a WebGL 2.0 shader. Mobile not supported.' href='https://theloni-monk.github.io/Julia-GL/' />
-          <ProjectWidget name='WaveSculptr Synthesizer' image={Images.wavescultr} isLogo={false} description='Bored of Sin or Square waves in your synthesizer? Draw your own waveforms and try something new. Mobile not supported.' href='https://theloni-monk.github.io/WaveSculptr_1.0/' />
+          <ProjectWidget name='Instrument Synth Controller' image={Images.pitch2synth} isLogo={false} description='A rust program that takes an audio stream from a monophonic instrument and extracts the pitch in order to trigger an external analog synthesizer via MIDI' href='https://github.com/theloni-monk/pitch2synth-rs/tree/main' />
           <ProjectWidget name='RPiStream' image={Images.rpistream} isLogo={false} description='Realtime video-streaming library written in python designed to be lightweight enough to run well on a raspberry pi' href='https://pypi.org/project/rpistream/' />
           <ProjectWidget name='MOS 6502 Emulator' image={Images.sixfiveohtwo} isLogo={false} description='An emulator for the iconic MOS 6502 CPU written in C++' href='https://github.com/theloni-monk/YA6502E' />
         </Grid>

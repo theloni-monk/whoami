@@ -31,8 +31,9 @@ const Bio = ({isMobile}) => {
         </Box>
         <Box mr="5%">
           <p style={{ textIndent: "2.5vw", fontSize: isMobile ? "1.75vh" : "2.25vw", marginTop: "4.75vw" }}>
-            I am Thelonious (aka Theo). I grew up in Cambridge, MA and Las Vegas, NV. I am currently Sophomore undergrad in the Electrical Engineering department of MIT. I am passionate about
-            both machine learning and embedded system design. I am an undergraduate researcher in the Earth Signals and Systems Group and in the Human-Computer Interaction Engineering Group at CSAIL.
+            I am Thelonious (Theo) Cooper. I am an Electrical Engineering major with a focus on signal processing, embedded software, and digital system design. 
+            I am an undergraduate researcher for the Earth Signals and Systems Group in the EAPS department of MIT, where I study novel optimal control algorithms and drone firmware architecture. 
+            I am passionate about edge computing especially in medical and sustainablity-focused applications.
           </p>
         </Box>
       </Grid>
