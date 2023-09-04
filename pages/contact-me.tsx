@@ -7,11 +7,19 @@ const fa = require('@fortawesome/fontawesome-free/js/all.js'); // dont ask, it j
 const uid = require('../creds/emailcreds.json').userid;
 
 const ContactPage = (props: { isMobile: boolean }) => {
+    const [mobile, setMobile] = useState(false);
 
     //onmount init email api
     useEffect(() => {
         init(uid);
+        const mobiles = window.matchMedia("(max-width: 480px)");
+        console.log('watchmobilesmedia', mobiles);
+        setMobile(mobiles.matches);
+        console.log("homepage loaded - garblalflarp");
     }, []);
+    useEffect(()=>{
+        
+      },[])
     
     const [headerHeight, setHeaderHeight] = useState(50);
     const [bodyHeight, setBodyHeight] = useState(400);
@@ -27,11 +35,11 @@ const ContactPage = (props: { isMobile: boolean }) => {
 
 
     return (
-        <div style={{ overflow: props.isMobile ? '' : 'hidden', height: '100%' }}>
-            <FixedHeader isMobile={props.isMobile} />
-            <Box mt={headerHeight} height={props.isMobile ? '100%' : bodyHeight}>
+        <div style={{ overflow: mobile ? '' : 'hidden', height: '100%' }}>
+            <FixedHeader isMobile={mobile} />
+            <Box mt={headerHeight} height={mobile ? '100%' : bodyHeight}>
                 <NiceBackground />
-                <Grid gridTemplateColumns={props.isMobile ? 'repeat(1,auto)' : 'repeat(2,auto)'} sx={{ position: 'relative', zIndex: 3 ,textShadow: '2px 2px 8px #000000'}}>
+                <Grid gridTemplateColumns={mobile ? 'repeat(1,auto)' : 'repeat(2,auto)'} sx={{ position: 'relative', zIndex: 3 ,textShadow: '2px 2px 8px #000000'}}>
                     <Box>
                         <Heading m='5%' mb='2%' color='white'>Tell Me Something!</Heading>
                         <Heading fontSize={3} color='grey' p='5%' pt='0'>I&#39;ll get back to you in 2-3 business days guaranteed</Heading>
@@ -42,14 +50,5 @@ const ContactPage = (props: { isMobile: boolean }) => {
             <Footer />
         </div>);
 };
-export async function getServerSideProps(context) {
-    //console.log(context.req.headers['user-agent'])
-    let mobileAgents = context.req.headers['user-agent'].match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i)
-    let mobile = mobileAgents?.length > 0
-    //console.log('mobile detected:', mobile)
-    return (
-        {
-            props: { isMobile: mobile } // will be passed to the page component as props
-        });
-}
+
 export default ContactPage;

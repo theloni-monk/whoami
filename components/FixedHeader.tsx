@@ -3,8 +3,10 @@ import { MarkGithubIcon } from "@primer/octicons-react";
 import { useEffect, useState } from 'react';
 import Link from 'next/link'
 import Head from 'next/head'
-
-const FixedHeader = ({ isMobile }) => {
+interface FHProps{
+  isMobile:boolean
+}
+const FixedHeader = (props:FHProps) => {
   const [width, setWidth] = useState(1000);
   useEffect(() =>{ 
     setWidth(window.innerWidth);
@@ -35,13 +37,13 @@ const FixedHeader = ({ isMobile }) => {
         <Header.Item>
           <Link href="https://github.com/theloni-monk/whoami" passHref={true}>
             <Header.Link fontSize={2} color='white'>
-              <StyledOcticon icon={MarkGithubIcon} size={24} mr={isMobile ? 0 : 2} />
+              <StyledOcticon icon={MarkGithubIcon} size={24} mr={props.isMobile ? 0 : 2} />
               {width > 500 ? <span>GitHub for this page</span> : ""}
             </Header.Link>
           </Link>
         </Header.Item>
         <Header.Item full>
-          <Heading ml={isMobile ? 0 : 2} fontSize={isMobile ? 1 : 2} textAlign='center' color='grey'>
+          <Heading ml={props.isMobile ? 0 : 2} fontSize={props.isMobile ? 1 : 2} textAlign='center' color='grey'>
             Thelonious Cooper
           </Heading>
         </Header.Item>

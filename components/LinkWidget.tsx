@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import {BorderBox, Flex, Heading} from '@primer/components'
 
-const LinkWidget = (props: { icon: string, title: string, description: string, to:string, isMobile }) => {
+const LinkWidget = (props: { icon: string, title: string, description: string, to:string, isMobile:boolean }) => {
     const [redirect,setRedirect] = useState(false);
     if(redirect) window.location.href = props.to;
     
